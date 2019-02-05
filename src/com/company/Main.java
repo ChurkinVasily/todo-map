@@ -24,7 +24,7 @@ public class Main {
         todoList2.put(id++, new Todo("2", "bbb"));
         todoList2.put(id++, new Todo("3", "ccc"));*/
 
-        System.out.println("enter code: -c for create, -r for read, -u for update, -d for remove");
+        System.out.println("enter code: -c for create, -r for read, -u for update, -d for remove or 'show all' ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String code = reader.readLine();
 
@@ -34,7 +34,8 @@ public class Main {
                     todoName = reader.readLine();
                     if (!todoList.containsKey(todoName)){
                         todoDescription = reader.readLine();
-                        todoList.put(todoName, todoDescription);}
+                        todoList.put(todoName, todoDescription);
+                        System.out.println("one note successfully add");}
                     else System.out.println("existing name");
                     break;
                 case "-r":
@@ -45,13 +46,18 @@ public class Main {
                     break;
                 case "-u":
                     todoName = reader.readLine();
-                    todoDescription = reader.readLine();
-                    todoList.put(todoName, todoDescription);
+                    if (todoList.containsKey(todoName)) {
+                        todoDescription = reader.readLine();
+                        todoList.put(todoName, todoDescription);
+                        System.out.println("one note successfully update");
+                    }
+                    else System.out.println("no such name. cannot update this todo");
                     break;
                 case "-d":
                     todoName = reader.readLine();
                     if (todoList.containsKey(todoName)){
-                        todoList.remove(todoName);}
+                        todoList.remove(todoName);
+                        System.out.println("one note successfully remove");}
                     else System.out.println("no such name. cannot remove");
                     break;
                 case "exit":
