@@ -21,10 +21,10 @@ public class App {
 
 //        Integer id = 0;
 //        System.out.println(id);
-//        Map<Integer, Todo> todoList2 = new HashMap<>();
-//        todoList2.put(id++, new Todo("1", "aaa"));
-//        todoList2.put(id++, new Todo("2", "bbb"));
-//        todoList2.put(id++, new Todo("3", "ccc"));
+//        Map<Integer, Task> todoList2 = new HashMap<>();
+//        todoList2.put(id++, new Task("1", "aaa"));
+//        todoList2.put(id++, new Task("2", "bbb"));
+//        todoList2.put(id++, new Task("3", "ccc"));
 
         System.out.println("enter code: -c for create, -r for read, -u for update, -d for remove or 'show all' ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
