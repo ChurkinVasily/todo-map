@@ -1,6 +1,6 @@
 package ru.churkin.entity;
 
-public class Task {
+public class task {
 
     private String taskName;
     private String userName;
@@ -8,15 +8,15 @@ public class Task {
     private String startTime;
     private String endTime;
 
-    public Task(String name, String project) {
+    public task(String name, String project) {
         this.taskName = name;
         this.project = project;
     }
 
-    public Task() {
+    public task() {
     }
 
-    public Task(String taskName, String project, String startTime, String endTime) {
+    public task(String taskName, String project, String startTime, String endTime) {
         this.taskName = taskName;
         this.project = project;
         this.startTime = startTime;
