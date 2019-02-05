@@ -1,4 +1,4 @@
-package com.company;
+package ru.churkin;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public class App {
 
     public static void main(String[] args) throws IOException {
 
@@ -19,11 +19,12 @@ public class Main {
         todoList.put("3", "ccc");
         todoList.put("4", "ddd");
 
-        /*Integer id;
-        Map<Integer, Todo> todoList2 = new HashMap<>();
-        todoList2.put(id++, new Todo("1", "aaa"));
-        todoList2.put(id++, new Todo("2", "bbb"));
-        todoList2.put(id++, new Todo("3", "ccc"));*/
+//        Integer id = 0;
+//        System.out.println(id);
+//        Map<Integer, Todo> todoList2 = new HashMap<>();
+//        todoList2.put(id++, new Todo("1", "aaa"));
+//        todoList2.put(id++, new Todo("2", "bbb"));
+//        todoList2.put(id++, new Todo("3", "ccc"));
 
         System.out.println("enter code: -c for create, -r for read, -u for update, -d for remove or 'show all' ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -36,7 +37,7 @@ public class Main {
                     if (!todoList.containsKey(todoName)){
                         todoDescription = reader.readLine();
                         todoList.put(todoName, todoDescription);
-                        System.out.println("one note successfully add");}
+                        System.out.println("one note successfully added");}
                     else System.out.println("existing name");
                     break;
                 case "-r":
@@ -50,7 +51,7 @@ public class Main {
                     if (todoList.containsKey(todoName)) {
                         todoDescription = reader.readLine();
                         todoList.put(todoName, todoDescription);
-                        System.out.println("one note successfully update");
+                        System.out.println("one note successfully updated");
                     }
                     else System.out.println("no such name. cannot update this todo");
                     break;
@@ -58,7 +59,7 @@ public class Main {
                     todoName = reader.readLine();
                     if (todoList.containsKey(todoName)){
                         todoList.remove(todoName);
-                        System.out.println("one note successfully remove");}
+                        System.out.println("one note successfully removed");}
                     else System.out.println("no such name. cannot remove");
                     break;
                 case "exit":

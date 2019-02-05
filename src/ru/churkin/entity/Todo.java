@@ -1,11 +1,8 @@
-package com.company.Model;
-
-import java.util.HashMap;
-import java.util.Map;
+package ru.churkin.entity;
 
 public class Todo {
 
-    Long id;
+    Integer id;
     String name;
     String description;
 
@@ -14,14 +11,14 @@ public class Todo {
         this.description = description;
     }
 
-    public Todo(Long id, String name, String description)
+    public Todo(Integer id, String name, String description)
     {
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -33,7 +30,7 @@ public class Todo {
         return description;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
