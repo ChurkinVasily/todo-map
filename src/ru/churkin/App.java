@@ -1,5 +1,7 @@
 package ru.churkin;
 
+import ru.churkin.service.Service;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,6 +12,11 @@ public class App {
 
     public static void main(String[] args) throws IOException {
 
+        Service newService = new Service();
+        newService.startService();
+
+
+        /*--------------------------------------------
         String todoName;
         String todoDescription;
 
@@ -18,13 +25,6 @@ public class App {
         todoList.put("2", "bbb");
         todoList.put("3", "ccc");
         todoList.put("4", "ddd");
-
-//        Integer id = 0;
-//        System.out.println(id);
-//        Map<Integer, task> todoList2 = new HashMap<>();
-//        todoList2.put(id++, new task("1", "aaa"));
-//        todoList2.put(id++, new task("2", "bbb"));
-//        todoList2.put(id++, new task("3", "ccc"));
 
         System.out.println("enter code: -c for create, -r for read, -u for update, -d for remove or 'show all' ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -73,7 +73,8 @@ public class App {
             }
             code = reader.readLine();
         }
-
+        ----------------------------------------------*/
     }
+
 }
 

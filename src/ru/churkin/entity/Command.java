@@ -1,13 +1,17 @@
-package ru.churkin.repository;
+package ru.churkin.entity;
 
-import java.util.Map;
+import java.io.IOException;
 
-public abstract class command {
+public abstract class Command {
 
     private String name;
     private String key;
 
-    abstract boolean realize(String key);
+    public abstract void realize() throws IOException;
+
+
+
+
 
     public String getName() {
         return name;

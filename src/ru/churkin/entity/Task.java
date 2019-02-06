@@ -1,26 +1,27 @@
 package ru.churkin.entity;
 
-public class task {
+public class Task {
 
     private String taskName;
-    private String userName;
     private String project;
     private String startTime;
     private String endTime;
+    private String userName;
 
-    public task(String name, String project) {
-        this.taskName = name;
-        this.project = project;
+//    public Task(String name, String project) {
+//        this.taskName = name;
+//        this.project = project;
+//    }
+
+    public Task() {
     }
 
-    public task() {
-    }
-
-    public task(String taskName, String project, String startTime, String endTime) {
+    public Task(String taskName, String project, String startTime, String endTime, String userName) {
         this.taskName = taskName;
         this.project = project;
         this.startTime = startTime;
         this.endTime = endTime;
+        this.userName = userName;
     }
 
     public String getTaskName() {
@@ -53,5 +54,13 @@ public class task {
 
     public void setEndTime(String endTime) {
         this.endTime = endTime;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
