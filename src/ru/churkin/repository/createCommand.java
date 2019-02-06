@@ -1,13 +1,14 @@
 package ru.churkin.repository;
 
 
-public class createCommand extends command{
+class createCommand extends command{
 
-    private String commandName = "creating";
-    private String commandCall = "-c";
+    private String key;
+    private String name;
 
-    public createCommand(String commandCall) {
-        this.commandCall = commandCall;
+    public createCommand(String name) {
+        setKey("-c");
+        setName("creating");
     }
 
     @Override
