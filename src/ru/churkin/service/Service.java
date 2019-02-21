@@ -1,7 +1,6 @@
 package ru.churkin.service;
 
 import ru.churkin.entity.Command;
-import ru.churkin.entity.Task;
 import ru.churkin.repository.CreateCommand;
 import ru.churkin.repository.DeleteCommand;
 import ru.churkin.repository.ReadCommand;
